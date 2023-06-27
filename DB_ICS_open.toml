@@ -1,0 +1,1292 @@
+[Create_Project]
+title = "DB_ICS_open"
+version = "1.0.0.2"
+auteur = "CEA"
+
+[Stencil_search_CVE]
+
+	[Stencil_search_CVE.1]
+	name = "CENTUM VP"
+	period = ["2021", "2022", "2023"]
+	severity = ["HIGH", "CRITICAL"]
+	[Stencil_search_CVE.2]
+	name = "AVEVA system platform"
+	[Stencil_search_CVE.3]
+	name = "ControlEdge RTU"
+
+[stencils]
+	[stencils.1]
+	name = "Generic Process"
+	description = "Description stencil Generic Process"
+	img_loc = "ImageProcess7.png"
+	Repre_stencil = "t_e"
+		
+		[stencils.1.proprieties1]
+		name = "Code Type"
+		values1 = "Not Selected"
+		values2 = "Managed"
+		values3 = "Unmanaged"
+
+		[stencils.1.proprieties2]
+		name = "Running As"
+		values1 = "Administrator"
+		values2 = "Not Selected"
+		values3 = "Standard Program With Elevation"
+		values4 = "Standard Program Without Elevation"
+		values5 = "Kernel"
+		values6 = "System"
+		values7 = "Network Service"
+		values8 = "Local Service"
+		values9 = "Windows Store App"
+
+		[stencils.1.proprieties3]
+		name = "Isolation Level"
+		values1 = "Low Integrity Level"
+		values2 = "AppContainer"
+		values3 = "Sandbox"
+		values4 = "Microsoft Office Isolated Conversion Environnement (MOICE)"
+		values5 = "Not Selected"
+
+		[stencils.1.proprieties4]
+		name = "Accept Input From"
+		values1 = "Any remote User or Entity"
+		values2 = "Local or Network Service"
+		values3 = "Local Standard User With Elevation"
+		values4 = "Local Standard User Without Elevation"
+		values5 = "Nothing"
+		values6 = "Not Selected"
+		values7 = "Kernel, System or Local Admin"
+		values8 = "Windows Store Apps or App Container Processes"
+		values9 = "Others"
+
+		[stencils.1.proprieties5]
+		name = "Implements or Uses an Authentication Mechanism"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.1.proprieties6]
+		name = "Implements or Uses an Authorization Mechanism"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.1.proprieties7]
+		name = "Implements or Uses a Communication Protocol"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.1.proprieties8]
+		name = "Sanitizes Input"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.1.proprieties9]
+		name = "Sanitizes Output"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+	[stencils.2]
+	name = "PLC"
+	description = "PLC"
+	img_loc = "ImageMachineTrustBoundaryArc7.png"
+	Repre_stencil = "t_e"
+	
+		[stencils.2.proprieties1]
+		name = "Firmware signature"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.2.proprieties2]
+		name = "Malformed input management"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+		
+		[stencils.2.proprieties3]
+		name = "Secure storage of secrets"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.2.proprieties4]
+		name = "Secure authentication on the administration interface"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+		
+		[stencils.2.proprieties5]
+		name = "Access control policy"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.2.proprieties6]
+		name = "Configuration confidentiality and integrity"
+		values1 = "Not Selected"
+		values2 = "Provide confidentiality"
+		values3 = "Provide integrity"
+		values4 = "No"
+		values5 = "Yes"
+		
+		[stencils.2.proprieties7]
+		name = "Integrity and authenticity of the user program"
+		values1 = "Not Selected"
+		values2 = "Provide authenticity"
+		values3 = "Provide integrity"
+		values4 = "No"
+		values5 = "Yes"
+
+		[stencils.2.proprieties8]
+		name = "Confidentiality of the user program"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+		
+		[stencils.2.proprieties9]
+		name = "Integrity and authenticity of execution mode"
+		values1 = "Not Selected"
+		values2 = "Provide authenticity"
+		values3 = "Provide integrity"
+		values4 = "No"
+		values5 = "Yes"
+
+		[stencils.2.proprieties10]
+		name = "Logs integrity"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+		
+		[stencils.2.proprieties11]
+		name = "Support secure communication"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.2.proprieties12]
+		name = "Support secure remote logging"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+		
+
+	[stencils.3]
+	name = "Generic Trust Line Boundary"
+	description = "Description stencil generic trust line boundary"
+	img_loc = "ImageGenericTrustBoundaryArc7.png"
+	Repre_stencil = "l_b"
+
+
+	[stencils.4]
+	name = "Generic Trust Border Boundary"
+	description = "Description stencil generic trust border boundary"
+	img_loc = "ImageGenericTrustBoundaryBorder7.png"
+	Repre_stencil = "b_b"
+
+
+	[stencils.5]
+	name = "Generic External Interactor"
+	description = "Description stencil generic external interactor"
+	img_loc = "ImageSecure7.png"
+	Repre_stencil = "t_r"
+		[stencils.5.proprieties1]
+		name = "Authenticates Itself"
+		values1 = "Not Applicable"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.5.proprieties2]
+		name = "Type"
+		values1 = "Code"
+		values2 = "Human"
+
+		[stencils.5.proprieties3]
+		name = "Microsoft"
+		values1 = "No"
+		values2 = "Yes"
+
+
+	[stencils.6]
+	name = "Generic Data Flow"
+	description = "Description stencil generic data flow"
+	img_loc = "ImageDataFlow7.png"
+	Repre_stencil = "f"
+		[stencils.6.proprieties1]
+		name = "Physical Network"
+		values1 = "Not Selected"
+		values2 = "Wifi"
+		values3 = "Wire"
+		values4 = "Bluethooth"
+		values5 = "2G-4G"
+
+		[stencils.6.proprieties2]
+		name = "Source Authenticated"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.6.proprieties3]
+		name = "Destination Authenticated"
+		values1 = "Not Selected"
+		values2 = "Yes"
+		values3 = "No"
+
+		[stencils.6.proprieties4]
+		name = "Provides Confidentiality"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties5]
+		name = "Provides Integrity"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties6]
+		name = "Transmits XML"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties7]
+		name = "Contains Cookies"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties8]
+		name = "SOAP Payload"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties9]
+		name = "REST Payload"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties10]
+		name = "RSS Payload"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties11]
+		name = "JSON Payload"
+		values1 = "Yes"
+		values2 = "No"
+
+		[stencils.6.proprieties12]
+		name = "Forgery Protection"
+		values1 = "Not Selected"
+		values2 = "ValidateAntiForgeryTokenAttribute"
+		values3 = "ViewStateUserKey"
+		values4 = "Nonce"
+		values5 = "Other dynamic canary"
+		values6 = "Static header not available to the browser"
+		values7 = "Other"
+		values8 = "None"
+		values9 = "Not applicable because the request does not change data"
+
+
+	[stencils.7]
+	name = "Generic Data Store"
+	description = "A representation of a data store."
+	img_loc = "ImageDataStore7.png"
+	Repre_stencil = "t_p"
+		[stencils.7.proprieties1]
+		name = "Stores Credentials"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties2]
+		name = "Stores Log Data"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties3]
+		name = "Encrypted"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties4]
+		name = "Signed"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties5]
+		name = "Write Access"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties6]
+		name = "Removable Storage"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties7]
+		name = "Backup"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties8]
+		name = "Shared"
+		values1 = "No"
+		values2 = "Yes"
+
+		[stencils.7.proprieties9]
+		name = "Store Type"
+		values1 = "SQL Relational Database"
+		values2 = "Non Relational Database"
+		values3 = "File System"
+		values4 = "Registry"
+		values5 = "Configuration"
+		values6 = "Cache"
+		values7 = "HTML5 Storage"
+		values8 = "Cookie"
+		values9 = "Device"
+
+[derived_stencils]
+##################################################
+# PLC
+##################################################
+
+	[derived_stencils.102]
+	stencil_base = "PLC"
+	name = "SOFREL S4W"
+	description = "Lacroix SOFREL S4W "
+	img_loc = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.103]
+	stencil_base = "PLC"
+	name = "AC 800M"
+	description = "ABB AC 800M - PM866"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.105]
+	stencil_base = "PLC"
+	name = "HPC800 Controller"
+	description = "ABB HPC800 Controller"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.108]
+	stencil_base = "PLC"
+	name = "Harmonas DEO"
+	description = "Azbil Harmonas-DEO system Process Controller DOPCⅣ (Redundant type)"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.109]
+	stencil_base = "PLC"
+	name = "HISEC 04 R900E"
+	description = "Hitachi, Ltd. HISEC 04/R900E"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.110]
+	stencil_base = "PLC"
+	name = "Experion C300"
+	description = "Honeywell Process Solutions Experion C300"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.113]
+	stencil_base = "PLC"
+	name = "ControlEdge PLC"
+	description = "Honeywell Process Solutions ControlEdge PLC"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.114]
+	stencil_base = "PLC"
+	name = "ControlEdge RTU"
+	description = "Honeywell Process Solutions ControlEdge RTU"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.118]
+	stencil_base = "PLC"
+	name = "Experion LX"
+	description = "Honeywell Process Solutions Experion LX"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.120]
+	stencil_base = "PLC"
+	name = "ControlEdge 900"
+	description = "Honeywell Process Solutions ControlEdge 900 Controller"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.122]
+	stencil_base = "PLC"
+	name = "Experion CN100"
+	description = "Honeywell Process Solutions Experion CN100"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.123]
+	stencil_base = "PLC"
+	name = "TOSDIC CIE DS nv"
+	description = "TOSHIBA INFRASTRUCTURE SYSTEMS & SOLUTIONS CORPORATION TOSDIC-CIE DS/nv"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.124]
+	stencil_base = "PLC"
+	name = "Yokogawa ProSafe RS"
+	description = "Yokogawa Electric Corporation ProSafe-RS"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.125]
+	stencil_base = "PLC"
+	name = "CENTUM VP"
+	description = "Yokogawa Electric Corporation CENTUM VP"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.126]
+	stencil_base = "PLC"
+	name = "SPC 600c"
+	description = "ABB SPC 600 Controller"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.127]
+	stencil_base = "PLC"
+	name = "ABB SPC 700"
+	description = "ABB SPC 700Controller"
+	img_log = "ImageMachineTrustBoundaryArc7.png"
+
+##################################################
+# Generic Process
+##################################################
+
+	[derived_stencils.201]
+	stencil_base = "Generic Process"
+	name = "AVEVA system platform"
+	description = "Description derived stencil Human-Machine Interface Harmony ST6"
+	img_loc = "ImageProcess7.png"
+
+	[derived_stencils.203]
+	stencil_base = "Generic Process"
+	name = "OS Process"
+	description = "OS Process"
+	img_loc = "ImageWin3264Application7.png"
+
+	[derived_stencils.204]
+	stencil_base = "Generic Process"
+	name = "Thread"
+	description = "Thread"
+	img_loc = "ImageWin3264Application7.png"
+
+	[derived_stencils.205]
+	stencil_base = "Generic Process"
+	name = "Kernel Thread"
+	description = "Kernel Thread"
+	img_loc = "ImageWin3264Application7.png"
+
+	[derived_stencils.206]
+	stencil_base = "Generic Process"
+	name = "Native Application"
+	description = "Native Application"
+	img_loc = "ImageWin3264Application7.png"
+
+	[derived_stencils.207]
+	stencil_base = "Generic Process"
+	name = "Virtual Machine"
+	description = "Virtual Machine"
+	img_loc = "ImageProcess7.png"
+
+	[derived_stencils.208]
+	stencil_base = "Generic Process"
+	name = "Managed Application"
+	description = "Managed Application"
+	img_loc = "ImageNetWebApplication7.png"
+
+	[derived_stencils.209]
+	stencil_base = "Generic Process"
+	name = "Thick Client"
+	description = "Thick Client"
+	img_loc = "ImageThickClient7.png"
+
+	[derived_stencils.210]
+	stencil_base = "Generic Process"
+	name = "Browser Client"
+	description = "Browser Client"
+	img_loc = "ImageBrowserClient7.png"
+
+	[derived_stencils.211]
+	stencil_base = "Generic Process"
+	name = "Web Server"
+	description = "Web Server"
+	img_loc = "ImageWebServer7.png"
+
+	[derived_stencils.212]
+	stencil_base = "Generic Process"
+	name = "Windows Store Process"
+	description = "Windows Store Process"
+	img_loc = "ImageProcess7.png"
+
+	[derived_stencils.212.proprieties1]
+	name = "Internet (Client & Server) capability"
+	values1 = "Not Selected"
+	values2 = "No"
+	values3 = "Yes"
+
+	[derived_stencils.213]
+	stencil_base = "Generic Process"
+	name = "Win32 Service"
+	description = "Win32 Service"
+	img_loc = "ImageNetWebApplication7.png"
+
+	[derived_stencils.214]
+	stencil_base = "Generic Process"
+	name = "Web Application"
+	description = "Web Application"
+	img_loc = "ImageNetWebApplication7.png"
+
+	[derived_stencils.215]
+	stencil_base = "Generic Process"
+	name = "Web Service"
+	description = "Web Service"
+	img_loc = "ImageNetWebApplication7.png"
+
+	[derived_stencils.216]
+	stencil_base = "Generic Process"
+	name = "Browser and ActiveX Plugins"
+	description = "Browser and ActiveX Plugins"
+	img_loc = "ImageBrowserPlugin7.PNG"
+
+	[derived_stencils.217]
+	stencil_base = "Generic Process"
+	name = "Applications Running on a non Microsoft OS"
+	description = "Applications Running on a non Microsoft OS"
+	img_loc = "ImageProcess7.png"
+
+##################################################
+# Generic External Interactor
+##################################################
+
+	[derived_stencils.301]
+	stencil_base = "Generic External Interactor"
+	name = "Human User"
+	description = "Description derived stencil human user"
+	img_loc = "ImageHumanUser7.PNG"
+
+	[derived_stencils.302]
+	stencil_base = "Generic External Interactor"
+	name = "External Web Application"
+	description = "A representation of an external Web application (portal, front ed, etc.)."
+	img_loc = "ImageWebApp7.png"
+
+	[derived_stencils.303]
+	stencil_base = "Generic External Interactor"
+	name = "External Web Service"
+	description = "A representation of an external Web service."
+	img_loc = "ImageWebServer7.png"
+
+	[derived_stencils.304]
+	stencil_base = "Generic External Interactor"
+	name = "Browser"
+	description = "Browser"
+	img_loc = "ImageBrowser7.png"
+
+	[derived_stencils.305]
+	stencil_base = "Generic External Interactor"
+	name = "Authorization Provider"
+	description = "Authorization Provider"
+	img_loc = "ImageAuthorizationProvider7.png"
+
+	[derived_stencils.306]
+	stencil_base = "Generic External Interactor"
+	name = "Megaservice"
+	description = "Megaservice"
+	img_loc = "ImageCloudService7.png"
+
+	[derived_stencils.307]
+	stencil_base = "Generic External Interactor"
+	name = "Windows Runtime"
+	description = "Windows Runtime"
+	img_loc = "ImageSecure7.png"
+
+	[derived_stencils.308]
+	stencil_base = "Generic External Interactor"
+	name = "Windows .NET Runtime"
+	description = "Windows .NET Runtime"
+	img_loc = "ImageSecure7.png"
+
+	[derived_stencils.309]
+	stencil_base = "Generic External Interactor"
+	name = "Windows RT Runtime"
+	description = "Windows RT Runtime"
+	img_loc = "ImageSecure7.png"
+
+
+##################################################
+# Generic Data Flow
+##################################################
+
+	[derived_stencils.401]
+	stencil_base = "Generic Data Flow"
+	name = "CANBus"
+	description = "Controller Area Network"
+	img_loc = "ImageDataFlow7.png"
+
+	[derived_stencils.402]
+	stencil_base = "Generic Data Flow"
+	name = "ModBus TCP"
+	description = "ModBus TCP"
+	img_loc = "ImageDataFlow7.png"
+
+	[derived_stencils.403]
+	stencil_base = "Generic Data Flow"
+	name = "HTTPS"
+	description = "A representation of an HTTPS data flow."
+	img_loc = "ImageHTTPS7.PNG"
+
+	[derived_stencils.404]
+	stencil_base = "Generic Data Flow"
+	name = "HTTP"
+	description = "A representation of an HTTP data flow."
+	img_loc = "ImageHTTP7.png"
+
+	[derived_stencils.405]
+	stencil_base = "Generic Data Flow"
+	name = "Binary"
+	description = "A representation of an Binary data flow."
+	img_loc = "ImageBinary7.png"
+
+	[derived_stencils.406]
+	stencil_base = "Generic Data Flow"
+	name = "IOCTL Interface"
+	description = "An interface for an application to communicate to a device driver."
+	img_loc = "ImageDataFlow7.png"
+
+	[derived_stencils.407]
+	stencil_base = "Generic Data Flow"
+	name = "IPsec"
+	description = "IPsec"
+	img_loc = "ImageIPSec7.png"
+
+	[derived_stencils.408]
+	stencil_base = "Generic Data Flow"
+	name = "Named Pipe"
+	description = "Named Pipe"
+	img_loc = "ImageNamedPipe7.png"
+
+	[derived_stencils.409]
+	stencil_base = "Generic Data Flow"
+	name = "SMB"
+	description = "SMB"
+	img_loc = "ImageSOAP7.png"
+
+	[derived_stencils.410]
+	stencil_base = "Generic Data Flow"
+	name = "RPC or DCOM"
+	description = "RPC or DCOM"
+	img_loc = "ImageREST7.png"
+
+	[derived_stencils.411]
+	stencil_base = "Generic Data Flow"
+	name = "ALPC"
+	description = "ALPC"
+	img_loc = "ImageDataFlow7.png"
+
+	[derived_stencils.412]
+	stencil_base = "Generic Data Flow"
+	name = "UDP"
+	description = "UDP"
+	img_loc = "ImageDataFlow7.png"
+
+##################################################
+# Generic Data Store
+##################################################
+
+	[derived_stencils.501]
+	stencil_base = "Generic Data Store"
+	name = "Cloud Storage"
+	description = "A representation of a Cloud Storage."
+	img_loc = "ImageCloudStorage7.png"
+
+	[derived_stencils.502]
+	stencil_base = "Generic Data Store"
+	name = "SQL Database"
+	description = "A representation of a SQL Database."
+	img_loc = "ImageSQLDatabase7.png"
+
+	[derived_stencils.503]
+	stencil_base = "Generic Data Store"
+	name = "Non Relational Database"
+	description = "A representation of a non-relational database."
+	img_loc = "ImageNoSQLDatabase7.PNG"
+
+	[derived_stencils.504]
+	stencil_base = "Generic Data Store"
+	name = "File System"
+	description = "A representation of a file system."
+	img_loc = "ImageFileSystem7.png"
+
+	[derived_stencils.505]
+	stencil_base = "Generic Data Store"
+	name = "Registry Hive"
+	description = "A representation of a Registry."
+	img_loc = "ImageRegistryHive7.png"
+
+	[derived_stencils.506]
+	stencil_base = "Generic Data Store"
+	name = "Cache"
+	description = "A representation of a local data cache."
+	img_loc = "ImageCache7.png"
+
+	[derived_stencils.507]
+	stencil_base = "Generic Data Store"
+	name = "HTML5 Local Storage"
+	description = "A representation of HTML5 local storage."
+	img_loc = "ImageHTML5LocalStorage7.png"
+
+	[derived_stencils.508]
+	stencil_base = "Generic Data Store"
+	name = "Cookies"
+	description = "Cookies"
+	img_loc = "ImageCookies7.png"
+
+	[derived_stencils.509]
+	stencil_base = "Generic Data Store"
+	name = "Device"
+	description = "A representation of device local storage."
+	img_loc = "ImageMachineTrustBoundaryArc7.png"
+
+	[derived_stencils.510]
+	stencil_base = "Generic Data Store"
+	name = "Configuration File"
+	description = "A configuration file, this includes XML, INI, and INF files."
+	img_loc = "ImageRegistryHive7.png"
+
+##################################################
+# Generic Trust Border Boundary
+##################################################
+
+	[derived_stencils.601]
+	stencil_base = "Generic Trust Border Boundary"
+	name = "CorpNet Trust Boundary"
+	description = "A border representation of a corporate network trust boundary."
+	img_loc = "ImageGenericTrustBoundaryBorder7.png"
+
+	[derived_stencils.602]
+	stencil_base = "Generic Trust Border Boundary"
+	name = "Sandbox Trust Boundary Border"
+	description = "Sandbox Trust Boundary Border"
+	img_loc = "ImageGenericTrustBoundaryBorder7.png"
+
+	[derived_stencils.603]
+	stencil_base = "Generic Trust Border Boundary"
+	name = "Internet Explorer Boundaries"
+	description = "Internet Explorer Boundaries"
+	img_loc = "ImageGenericTrustBoundaryBorder7.png"
+
+	[derived_stencils.604]
+	stencil_base = "Generic Trust Border Boundary"
+	name = "Other Browsers Boundaries"
+	description = "Other Browsers Boundaries"
+	img_loc = "ImageGenericTrustBoundaryBorder7.png"
+
+##################################################
+# Generic Trust Line Boundary
+##################################################
+
+	[derived_stencils.701]
+	stencil_base = "Generic Trust Line Boundary"
+	name = "Internet Boundary"
+	description = "An arc representation of an Internet trust boundary."
+	img_loc = "ImageGenericTrustBoundaryArc7.png"
+
+	[derived_stencils.702]
+	stencil_base = "Generic Trust Line Boundary"
+	name = "Machine Trust Boundary"
+	description = "An arc representation of a machine trust boundary."
+	img_loc = "ImageGenericTrustBoundaryArc7.png"
+
+	[derived_stencils.703]
+	stencil_base = "Generic Trust Line Boundary"
+	name = "User mode or Kernel mode Boundary"
+	description = "A border representation of user-model / kernel-mode separation."
+	img_loc = "ImageGenericTrustBoundaryArc7.png"
+
+	[derived_stencils.704]
+	stencil_base = "Generic Trust Line Boundary"
+	name = "AppContainer Boundary"
+	description = "AppContainer Boundary"
+	img_loc = "ImageGenericTrustBoundaryArc7.png"
+
+##################################################
+# Industrial field instrument
+##################################################
+
+	[derived_stencils.8]
+	stencil_base = "Industrial field instrument"
+	name = "Breaker"
+	description = "Description derived stencil breaker"
+	img_loc = "Disjoncteur.png"
+
+	[derived_stencils.9]
+	stencil_base = "Industrial field instrument"
+	name = "Disconnector"
+	description = "Description derived stencil disconnector"
+	img_loc = "Sectionneur.png"
+
+
+
+[Threat_Categories]
+	[Threat_Categories.1]
+	name = "Spoofing"
+	description = "Spoofing is when a process or entity is sommething other than its clained identity. Examples include substituting a process, a file, website or a network address."
+
+	[Threat_Categories.2]
+	name = "Tampering"
+	description = "Tampering is the act of altering the bits. Tampering with a process involves changing bits in the running process. Similarly, Tampering with a data flow involves changing bits on the wire or between two running processes."
+
+	[Threat_Categories.3]
+	name = "Repudiation"
+	description = "Repudiation threats involve an adversary denying that something happened."
+
+	[Threat_Categories.4]
+	name = "Information Disclosure"
+	description = "Information disclosure happens when the information can be read by an unauthorized party."
+
+	[Threat_Categories.5]
+	name = "Denial Of Service"
+	description = "Denial of Service happens when the process or a datastore is not able to service incoming requests or perform up to spec."
+
+	[Threat_Categories.6]
+	name = "Elevation Of Privilege"
+	description = "A user subject gains increased capability or privilege by taking advantage of an implementation bug."
+
+	[Threat_Categories.7]
+	name = "Others"
+	description = "A user subject gains increased capability or privilege by taking advantage of an implementation bug."
+
+[Basic_Type_Threat]
+
+##################################################
+# Spoofing
+##################################################
+
+	[Basic_Type_Threat.100]
+	Parent = "Spoofing"
+	name = "Spoofing (v3)"
+	include = "source is [ROOT]"
+	Description = "Threat was migrated from V3."
+
+	[Basic_Type_Threat.101]
+	Parent = "Spoofing"
+	name = "Spoofing the {source.Name} Process"
+	include = "source is [Generic Process] and (target is [Generic Process] or target is [Generic Data Store]) and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	exclude = "flow.[Source Authenticated] is 'Yes' or source.[Implements or Uses an Authentication Mechanism] is 'Yes'"
+	Description = "{source.Name} may be spoofed by an attacker and this may lead to unauthorized access to {target.Name}. Consider using a standard authentication mechanism to identify the source process."
+
+	[Basic_Type_Threat.102]
+	Parent = "Spoofing"
+	name = "Spoofing the {target.Name} Process"
+	include = "(source is [Generic Process] or source is [Generic External Interactor] or source is [Generic Data Store]) and target is [Generic Process] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	exclude = "flow.[Destination Authenticated] is 'Yes'"
+	Description = "{target.Name} may be spoofed by an attacker and this may lead to information disclosure by {source.Name}. Consider using a standard authentication mechanism to identify the destination process."
+
+	[Basic_Type_Threat.103]
+	Parent = "Spoofing"
+	name = "Spoofing the {source.Name} External Entity"
+	include = "source is [Generic External Interactor] and target is [Generic Process]"
+	exclude = "source.[Authenticates Itself] is 'Yes' or flow.[Source Authenticated] is 'Yes'"
+	Description = "{source.Name} may be spoofed by an attacker and this may lead to unauthorized access to {target.Name}. Consider using a standard authentication mechanism to identify the external entity."
+
+	[Basic_Type_Threat.104]
+	Parent = "Spoofing"
+	name = "Spoofing of Source Data Store {source.Name}"
+	include = "source is [Generic Data Store]"
+	Description = "{source.Name} may be spoofed by an attacker and this may lead to incorrect data delivered to {target.Name}. Consider using a standard authentication mechanism to identify the source data store."
+
+	[Basic_Type_Threat.105]
+	Parent = "Spoofing"
+	name = "Spoofing of Destination Data Store {target.Name}"
+	include = "target is [Generic Data Store]"
+	Description = "{target.Name} may be spoofed by an attacker and this may lead to data being written to the attacker's target instead of {target.Name}. Consider using a standard authentication mechanism to identify the destination data store."
+
+	[Basic_Type_Threat.106]
+	Parent = "Spoofing"
+	name = "Spoofing of the {target.Name} External Destination Entity"
+	include = "source is [Generic Process] and target is [Generic External Interactor] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "{target.Name} may be spoofed by an attacker and this may lead to data being sent to the attacker's target instead of {target.Name}. Consider using a standard authentication mechanism to identify the external entity."
+
+##################################################
+# Tampering
+##################################################	
+
+	[Basic_Type_Threat.200]
+	Parent = "Tampering"
+	name = "Tampering (v3)"
+	include = "source is [ROOT]"
+	Description = "Threat was migrated from V3."
+
+	[Basic_Type_Threat.201]
+	Parent = "Tampering"
+	name = "Potential Lack of Input Validation for {target.Name}"
+	include = "(source is [Generic Process] or source is [Generic External Interactor]) and target is [Generic Process] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	exclude = "(flow.[Provides Confidentiality] is 'Yes' and flow.[Provides Integrity] is 'Yes')"
+	Description = "Data flowing across {flow.Name} may be tampered with by an attacker. This may lead to a denial of service attack against {target.Name} or an elevation of privilege attack against {target.Name} or an information disclosure by {target.Name}. Failure to verify that input is as expected is a root cause of a very large number of exploitable issues. Consider all paths and the way they handle data. Verify that all input is verified for correctness using an approved list input validation approach."
+
+	[Basic_Type_Threat.202]
+	Parent = "Tampering"
+	name = "{source.Name} Process Memory Tampered"
+	include = "source is [Generic Process] and target is [Generic Process] and target.[Code Type] is 'Unmanaged'"
+	Description = "If {source.Name} is given access to memory, such as shared memory or pointers, or is given the ability to control what {target.Name} executes (for example, passing back a function pointer.), then {source.Name} can tamper with {target.Name}. Consider if the function could work with less access to memory, such as passing data rather than pointers. Copy in data provided, and then validate it."
+
+	[Basic_Type_Threat.203]
+	Parent = "Tampering"
+	name = "Replay Attacks"
+	include = "source is [Generic Process] and target is [Generic Process] and source.[Implements or Uses a Communication Protocol] is 'Yes'"
+	Description = "Packets or messages without sequence numbers or timestamps can be captured and replayed in a wide variety of ways. Implement or utilize an existing communication protocol that supports anti-replay techniques (investigate sequence numbers before timers) and strong integrity."
+
+	[Basic_Type_Threat.204]
+	Parent = "Tampering"
+	name = "Collision Attacks"
+	include = "source is [Generic Process] and target is [Generic Process] and source.[Implements or Uses a Communication Protocol] is 'Yes'"
+	Description = "Attackers who can send a series of packets or messages may be able to overlap data. For example, packet 1 may be 100 bytes starting at offset 0. Packet 2 may be 100 bytes starting at offset 25. Packet 2 will overwrite 75 bytes of packet 1. Ensure you reassemble data before filtering it, and ensure you explicitly handle these sorts of cases."
+
+	[Basic_Type_Threat.205]
+	Parent = "Tampering"
+	name = "Risks from Logging"
+	include = "(source is [Generic Process] and target is [Generic Data Store] and target.[Stores Log Data] is 'Yes') or (target is [Generic Process] and source is [Generic Data Store] and source.[Stores Log Data] is 'Yes')"
+	Description = "Log readers can come under attack via log files. Consider ways to canonicalize data in all logs. Implement a single reader for the logs, if possible, in order to reduce attack surface area. Be sure to understand and document log file elements which come from untrusted sources."
+
+	[Basic_Type_Threat.206]
+	Parent = "Tampering"
+	name = "Authenticated Data Flow Compromised"
+	include = "(flow.[Source Authenticated] is 'Yes' or flow.[Destination Authenticated] is 'Yes')"
+	exclude = "(flow.[Provides Confidentiality] is 'Yes' and flow.[Provides Integrity] is 'Yes')"
+	Description = "An attacker can read or modify data transmitted over an authenticated dataflow."
+
+	[Basic_Type_Threat.207]
+	Parent = "Tampering"
+	name = "Potential SQL Injection Vulnerability for {target.Name}"
+	include = "(target is [SQL Database] and source is [Generic Process])"
+	Description = "SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution. Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities because SQL Server will execute all syntactically valid queries that it receives. Even parameterized data can be manipulated by a skilled and determined attacker."
+
+	[Basic_Type_Threat.208]
+	Parent = "Tampering"
+	name = "Possible SQL Injection Vulnerability for {target.Name}"
+	include = "(target is [SQL Database] and source is [Generic External Interactor])"
+	Description = "SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution. Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities because SQL Server will execute all syntactically valid queries that it receives. Even parameterized data can be manipulated by a skilled and determined attacker."
+
+	[Basic_Type_Threat.209]
+	Parent = "Tampering"
+	name = "XML DTD and XSLT Processing"
+	include = "(flow.[Transmits XML] is 'Yes' and target is [Generic Process])"
+	Description = "If a dataflow contains XML, XML processing threats (DTD and XSLT code execution) may be exploited."
+
+	[Basic_Type_Threat.210]
+	Parent = "Tampering"
+	name = "JavaScript Object Notation Processing"
+	include = "((flow is [HTTP] or flow is [HTTPS]) and flow.[JSON Payload] is 'Yes' and target is [Generic Process])"
+	Description = "If a dataflow contains JSON, JSON processing and hijacking threats may be exploited."
+
+	[Basic_Type_Threat.211]
+	Parent = "Tampering"
+	name = "Cross Site Scripting"
+	include = "(target is [Web Server] or target is [Web Application])"
+	exclude = "(target.[Sanitizes Output] is 'Yes') and (target.[Sanitizes Input] is 'Yes')"
+	Description = "The web server '{target.Name}' could be a subject to a cross-site scripting attack because it does not sanitize untrusted input."
+
+	[Basic_Type_Threat.212]
+	Parent = "Tampering"
+	name = "Persistent Cross Site Scripting"
+	include = "(target is [Web Server] or target is [Web Application]) and source is [Generic Data Store]"
+	exclude = "(target.[Sanitizes Output] is 'Yes') and (target.[Sanitizes Input] is 'Yes')"
+	Description = "The web server '{target.Name}' could be a subject to a persistent cross-site scripting attack because it does not sanitize data store '{source.Name}' inputs and output."
+
+	[Basic_Type_Threat.213]
+	Parent = "Tampering"
+	name = "The {target.Name} Data Store Could Be Corrupted"
+	include = "(source is [Generic Process] or source is [Generic External Interactor]) and target is [Generic Data Store] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "Data flowing across {flow.Name} may be tampered with by an attacker. This may lead to corruption of {target.Name}. Ensure the integrity of the data flow to the data store."
+
+	[Basic_Type_Threat.214]
+	Parent = "Tampering"
+	name = "Firmware alteration"
+	include = "target is [PLC]" 
+	exclude = "target.[Firmware signature] is 'Yes'" 
+	Description = "The attacker manages to inject and run a corrupted firmware on the {target.name}. The code injection may be temporary or permanent and this does include any unexpected or unauthorized code execution. A user may attempt to install that update on the {target.name} by legitimate means. Finally, the attacker manages to modify the version of the firmware installed on the {target.name} without having the privilege to do so"
+
+	[Basic_Type_Threat.215]
+	Parent = "Tampering"
+	name = "Execution mode alteration"
+	include = "target is [PLC]"
+	exclude = "target.[Integrity and authenticity of execution mode] is 'Yes' or target.[Integrity and authenticity of execution mode] is 'Provide integrity'"
+	Description = "The attacker manages to modify the execution mode of the ToE without being authorized (a stop command for instance)."
+
+	[Basic_Type_Threat.216]
+	Parent = "Tampering"
+	name = "User program alteration"
+	include = "target is [PLC]"
+	exclude = "target.[Integrity and authenticity of the user program] is 'Yes' or target.[Integrity and authenticity of the user program] is 'Provide integrity'"
+	Description = "The attacker manages to modify, temporarily or permanently, the user program."
+
+	[Basic_Type_Threat.217]
+	Parent = "Tampering"
+	name = "Configuation alteration"
+	include = "target is [PLC]"
+	exclude = "target.[Configuration confidentiality and integrity] is 'Yes' or target.[Configuration confidentiality and integrity] is 'Provide integrity'"
+	Description = "The attacker manages to modify, temporary or permanently, the {target.name} configuration."
+	
+	[Basic_Type_Threat.218]
+	Parent = "Tampering"
+	name = "Credentials theft"
+	include = "target is [PLC]"
+	exclude = "target.[Secure storage of secrets] is 'Yes'"
+	Description = "The attacker manages to steal user credentials"
+
+	[Basic_Type_Threat.219]
+	Parent = "Tampering"
+	name = "Local logs alteration"
+	include = "target is [PLC]"
+	exclude = "target.[Logs integrity] is 'Yes'"
+	Description = "The attacker manages to delete or modify a local log entry without being authorized by the access control policy of the {target.name}"
+
+	[Basic_Type_Threat.220]
+	Parent = "Tampering"
+	name = "Remote logs alteration"
+	include = "target is [PLC]"
+	exclude = "target.[Support secure remote logging] is 'Yes'"
+	Description = "The attacker manages to modify a remote log entry without the receiver being able to notice it. The attacker manages to delete a remote log message without the receiver being able to notice it"
+
+##################################################
+# Repudiation
+##################################################
+
+	[Basic_Type_Threat.300]
+	Parent = "Repudiation"
+	name = "Repudiation (v3)"
+	include = "source is [ROOT]"
+	Description = "Threat was migrated from V3."
+
+	[Basic_Type_Threat.301]
+	Parent = "Repudiation"
+	name = "Lower Trusted Subject Updates Logs"
+	include = "(source is [Generic Process] or source is [Generic External Interactor]) and (target is [Generic Data Store]) and (target.[Stores Log Data] is 'Yes')"
+	Description = "If you have trust levels, is anyone other outside of the highest trust level allowed to log? Letting everyone write to your logs can lead to repudiation problems. Only allow trusted code to log."
+
+	[Basic_Type_Threat.302]
+	Parent = "Repudiation"
+	name = "Data Logs from an Unknown Source"
+	include = "(source is [Generic Process] or source is [Generic External Interactor]) and (target is [Generic Data Store]) and (target.[Stores Log Data] is 'Yes')"
+	Description = "Do you accept logs from unknown or weakly authenticated users or systems? Identify and authenticate the source of the logs before accepting them."
+
+	[Basic_Type_Threat.303]
+	Parent = "Repudiation"
+	name = "Insufficient Auditing"
+	include = "source is [Generic Process] and target is [Generic Data Store] and target.[Stores Log Data] is 'Yes'"
+	Description = "Does the log capture enough data to understand what happened in the past? Do your logs capture enough data to understand an incident after the fact? Is such capture lightweight enough to be left on all the time? Do you have enough data to deal with repudiation claims? Make sure you log sufficient and appropriate data to handle a repudiation claims. You might want to talk to an audit expert as well as a privacy expert about your choice of data."
+
+	[Basic_Type_Threat.304]
+	Parent = "Repudiation"
+	name = "Potential Weak Protections for Audit Data"
+	include = "source is [Generic Process] and target is [Generic Data Store] and target.[Stores Log Data] is 'Yes'"
+	Description = "Consider what happens when the audit mechanism comes under attack, including attempts to destroy the logs, or attack log analysis programs. Ensure access to the log is through a reference monitor, which controls read and write separately. Document what filters, if any, readers can rely on, or writers should expect"
+
+	[Basic_Type_Threat.305]
+	Parent = "Repudiation"
+	name = "Potential Data Repudiation by {target.Name}"
+	include = "target is [Generic Process] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "{target.Name} claims that it did not receive data from a source outside the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data."
+
+	[Basic_Type_Threat.306]
+	Parent = "Repudiation"
+	name = "External Entity {target.Name} Potentially Denies Receiving Data"
+	include = "target is [Generic External Interactor] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "{target.Name} claims that it did not receive data from a process on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data."
+
+	[Basic_Type_Threat.307]
+	Parent = "Repudiation"
+	name = "Data Store Denies {target.Name} Potentially Writing Data"
+	include = "target is [Generic Data Store] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "{target.Name} claims that it did not write data received from an entity on the other side of the trust boundary. Consider using logging or auditing to record the source, time, and summary of the received data."
+
+##################################################
+# Information Disclosure
+##################################################
+
+	[Basic_Type_Threat.400]
+	Parent = "Information Disclosure"
+	name = "Information Disclosure (v3)"
+	include = "source is [ROOT]"
+	Description = "Threat was migrated from V3."
+
+	[Basic_Type_Threat.401]
+	Parent = "Information Disclosure"
+	name = "Authorization Bypass"
+	include = "source is [Generic Process] and target is [Generic Data Store] and source.[Implements or Uses an Authorization Mechanism] is 'Yes'"
+	Description = "Can you access {target.Name} and bypass the permissions for the object? For example by editing the files directly with a hex editor, or reaching it via filesharing? Ensure that your program is the only one that can access the data, and that all other subjects have to use your interface."
+
+	[Basic_Type_Threat.402]
+	Parent = "Information Disclosure"
+	name = "Data Flow Sniffing"
+	include = "((source is [Generic Process] or source is [Generic External Interactor]) and target is [Generic Process] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])) or (source is [Generic Process] and target is [Generic Data Store] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary]))"
+	exclude = "flow.[Provides Confidentiality] is 'Yes'"
+	Description = "Data flowing across {flow.Name} may be sniffed by an attacker. Depending on what type of data an attacker can read, it may be used to attack other parts of the system or simply be a disclosure of information leading to compliance violations. Consider encrypting the data flow."
+
+	[Basic_Type_Threat.403]
+	Parent = "Information Disclosure"
+	name = "Weak Access Control for a Resource"
+	include = "source is [Generic Data Store] and (target is [Generic Process] or target is [Generic External Interactor])"
+	Description = "Improper data protection of {source.name} can allow an attacker to read information not intended for disclosure. Review authorization settings."
+
+	[Basic_Type_Threat.404]
+	Parent = "Information Disclosure"
+	name = "Weak Credential Storage"
+	include = "source is [Generic Process] and target is [Generic Data Store] and target.[Stores Credentials] is 'Yes'"
+	Description = "Credentials held at the server are often disclosed or tampered with and credentials stored on the client are often stolen. For server side, consider storing a salted hash of the credentials instead of storing the credentials themselves. If this is not possible due to business requirements, be sure to encrypt the credentials before storage, using an SDL-approved mechanism. For client side, if storing credentials is required, encrypt them and protect the data store in which they're stored"
+
+	[Basic_Type_Threat.405]
+	Parent = "Information Disclosure"
+	name = "Weak Credential Transit"
+	include = "source is [Generic Process] and (target is [Generic Process] or target is [Generic Data Store]) and (flow crosses [Machine Trust Boundary])"
+	exclude = "flow is [HTTPS] or flow is [IPsec]"
+	Description = "Credentials on the wire are often subject to sniffing by an attacker. Are the credentials re-usable/re-playable? Are credentials included in a message? For example, sending a zip file with the password in the email. Use strong cryptography for the transmission of credentials. Use the OS libraries if at all possible, and consider cryptographic algorithm agility, rather than hardcoding a choice."
+
+	[Basic_Type_Threat.406]
+	Parent = "Information Disclosure"
+	name = "Weak Authentication Scheme"
+	include = "source is [Generic Process] and target is [Generic Process] and source.[Implements or Uses an Authentication Mechanism] is 'Yes'"
+	Description = "Custom authentication schemes are susceptible to common weaknesses such as weak credential change management, credential equivalence, easily guessable credentials, null credentials, downgrade authentication or a weak credential change management system. Consider the impact and potential mitigations for your custom authentication scheme."
+
+	[Basic_Type_Threat.407]
+	Parent = "Information Disclosure"
+	name = "Credentials theft(Weak Credential Storage)"
+	include = "target is [PLC]" 
+	exclude = "target.[Secure storage of secrets] is 'Yes'"
+	Description = "The attacker manages to steal user credentials"
+
+	[Basic_Type_Threat.408]
+	Parent = "Information Disclosure"
+	name = "Configuration compromise"
+	include = "target is [PLC]"
+	exclude = "target.[Configuration confidentiality and integrity] is 'Yes' or target.[Configuration confidentiality and integrity] is 'Provide confidentiality'"
+	Description = "The attacker manages to illegally obtain some parts of the {target.name} configuration."
+
+##################################################
+# Denial of Service
+##################################################
+
+	[Basic_Type_Threat.500]
+	Parent = "Denial Of Service"
+	name = "Denial Of Service (v3)"
+	include = "source is [ROOT]"
+	Description = "Threat was migrated from V3."
+
+	[Basic_Type_Threat.501]
+	Parent = "Denial Of Service"
+	name = "Potential Excessive Resource Consumption for {source.Name} or {target.Name}"
+	include = "source is [Generic Process] and target is [Generic Data Store]"
+	Description = "Does {source.Name} or {target.Name} take explicit steps to control resource consumption? Resource consumption attacks can be hard to deal with, and there are times that it makes sense to let the OS do the job. Be careful that your resource requests don't deadlock, and that they do timeout."
+
+	[Basic_Type_Threat.502]
+	Parent = "Denial Of Service"
+	name = "Potential Process Crash or Stop for {target.Name}"
+	include = "target is [Generic Process] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "{target.Name} crashes, halts, stops or runs slowly; in all cases violating an availability metric."
+
+	[Basic_Type_Threat.503]
+	Parent = "Denial Of Service"
+	name = "Data Flow {flow.Name} Is Potentially Interrupted"
+	include = "(flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "An external agent interrupts data flowing across a trust boundary in either direction."
+
+	[Basic_Type_Threat.504]
+	Parent = "Denial Of Service"
+	name = "Data Store Inaccessible"
+	include = "(source is [Generic Data Store] or target is [Generic Data Store]) and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "An external agent prevents access to a data store on the other side of the trust boundary."
+
+	[Basic_Type_Threat.505]
+	Parent = "Denial Of Service"
+	name = "PLC denial of service"
+	include = "target is [PLC]"
+	exclude = "target.[Secure authentication on the administration interface] is 'Yes' and target.[Malformed input management] is 'Yes' and target.[Secure authentication on the administration interface] is 'Yes'"
+	Description = "The attacker manages to generate a denial of service on the {target.Name} device by performing an unexpected action or by exploiting a vulnerability (sending a malformed request, using a corrupted configuration file. . . ). This denial of service can affect the whole {target.Name} device or only some of its functions."
+
+##################################################
+# Elevation of Privilege
+##################################################
+
+	[Basic_Type_Threat.600]
+	Parent = "Elevation Of Privilege"
+	name = "Elevation Of Privilege (v3)"
+	include = "source is [ROOT]"
+	Description = "Threat was migrated from V3."
+
+	[Basic_Type_Threat.601]
+	Parent = "Elevation Of Privilege"
+	name = "Weakness in SSO Authorization"
+	include = "target is [Authorization Provider]"
+	exclude = "(target is [Authorization Provider] and target.[Microsoft] is 'Yes')"
+	Description = "Common SSO implementations such as OAUTH2 and OAUTH Wrap are vulnerable to MitM attacks."
+
+	[Basic_Type_Threat.602]
+	Parent = "Elevation Of Privilege"
+	name = "Elevation Using Impersonation"
+	include = "(source is [Generic External Interactor] or source is [Generic Process]) and target is [Generic Process]"
+	Description = "{target.Name} may be able to impersonate the context of {source.Name} in order to gain additional privilege."
+
+	[Basic_Type_Threat.603]
+	Parent = "Elevation Of Privilege"
+	name = "{target.Name} May be Subject to Elevation of Privilege Using Remote Code Execution"
+	include = "target is [Generic Process] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "{source.Name} may be able to remotely execute code for {target.Name}."
+
+	[Basic_Type_Threat.604]
+	Parent = "Elevation Of Privilege"
+	name = "Elevation by Changing the Execution Flow in {target.Name}"
+	include = "target is [Generic Process] and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	Description = "An attacker may pass data into {target.Name} in order to change the flow of program execution within {target.Name} to the attacker's choosing."
+
+	# It does not work for the moment
+	#[Basic_Type_Threat.605]
+	#Parent = "Elevation Of Privilege"
+	#name = "Cross Site Request Forgery"
+	#include = "(source is [Generic Process] or  source is  [Generic External Interactor]) and (target is [Generic Process] ) and (flow.[Source Authenticated] is 'Not Selected' or  flow.[Source Authenticated] is 'Yes') and (flow.[Forgery Protection] is 'None' or flow.[Forgery Protection] is 'Not Selected' ) and (flow crosses [Generic Trust Line Boundary] or flow crosses [Generic Trust Border Boundary])"
+	#exclude = "(source is [OS Process] or source is [Thread] or source is [Kernel Thread] or source is [Native Application] or source is [Managed Application] or source is [Web Server] or source is [Win32 Service] or  source is [Web Service] or source is [Virtual Machine] or (source is [Windows Store Process] and source.[Internet (Client & Server) capability] is 'No' and source.[Internet (Client) capability] is 'No' ) or source is [Authorization Provider] or source is [External Web Service] or source is [External Web Application] or source is [Megaservice] or source is [Windows Runtime] or source is [Windows .NET Runtime] or source is [Windows RT Runtime] ) or (target is [Thick Client] or target is [Browser Client] or target is [Browser and ActiveX Plugins] or target is [Windows Store Process]) or (flow crosses [Machine Trust Boundary] or flow crosses [User mode or Kernel mode Boundary] or flow crosses [AppContainer Boundary] or flow crosses [CorpNet Trust Boundary] or flow crosses [Sandbox Trust Boundary Border])"
+	#Description = "Cross-site request forgery (CSRF or XSRF) is a type of attack in which an attacker forces a user's browser to make a forged request to a vulnerable site by exploiting an existing trust relationship between the browser and the vulnerable web site.  In a simple scenario, a user is logged in to web site A using a cookie as a credential.  The other browses to web site B.  Web site B returns a page with a hidden form that posts to web site A.  Since the browser will carry the user's cookie to web site A, web site B now can take any action on web site A, for example, adding an admin to an account.  The attack can be used to exploit any requests that the browser automatically authenticates, e.g. by session cookie, integrated authentication, IP whitelisting.  The attack can be carried out in many ways such as by luring the victim to a site under control of the attacker, getting the user to click a link in a phishing email, or hacking a reputable web site that the victim will visit. The issue can only be resolved on the server side by requiring that all authenticated state-changing requests include an additional piece of secret payload (canary or CSRF token) which is known only to the legitimate web site and the browser and which is protected in transit through SSL/TLS. See the Forgery Protection property on the flow stencil for a list of mitigations."
+
+	[Basic_Type_Threat.606]
+	Parent = "Elevation Of Privilege"
+	name = "Firmware compromise"
+	include = "target is [PLC]"
+	exclude = "target.[Firmware signature] is 'Yes'"
+	Description = "The attacker manages to inject and run a corrupted firmware on the {target.name}. The code injection may be temporary or permanent and this does include any unexpected or unauthorized code execution. A user may attempt to install that update on the {target.name} by legitimate means. Finally, the attacker manages to modify the version of the firmware installed on the {target.name} without having the privilege to do so"
+
+	[Basic_Type_Threat.607]
+	Parent = "Elevation Of Privilege"
+	name = "User program compromise"
+	include = "target is [PLC]"
+	exclude = "target.[Integrity and authenticity of the user program] is 'Yes' or target.[Integrity and authenticity of the user program] is 'Provide authenticity'" 
+	Description = "The attacker manages to obtain some parts of the configuration of the ToE by other means than the observation of the activity of the {target.name}"
+
+	[Basic_Type_Threat.609]
+	Parent = "Elevation Of Privilege"
+	name = "Authentication violation"
+	include = "target is [PLC]"
+	exclude = "target.[Secure authentication on the administration interface] is 'Yes' and target.[Support secure communication] is 'Yes'"
+	Description = "The attacker succeeds in authenticating himself without credentials."
+
+	[Basic_Type_Threat.610]
+	Parent = "Elevation Of Privilege"
+	name = "Access control violation"
+	include = "target is [PLC]"
+	exclude = "target.[Access control policy] is 'Yes' and target.[Support secure communication] is 'Yes'"
+	Description = "The attacker manages to obtain permissions that he does not normally have."
+
+	[Basic_Type_Threat.611]
+	Parent = "Elevation Of Privilege"
+	name = "Local logs compromise"
+	include = "target is [PLC]"
+	exclude = "target.[Access control policy] is 'Yes' and target.[Secure authentication on the administration interface] is 'Yes' and target.[Support secure communication] is 'Yes'"
+	Description = "The attacker manages to delete or modify a local log entry without being authorized by the access control policy of the {target.name}"
+
+	[Basic_Type_Threat.612]
+	Parent = "Elevation Of Privilege"
+	name = "Remote logs compromise"
+	include = "target is [PLC]"
+	exclude = "target.[Support secure remote logging] is 'Yes'"
+	Description = "The attacker manages to modify a remote log entry without the receiver being able to notice it. The attacker manages to delete a remote log message without the receiver being able to notice it"
+
+	[Basic_Type_Threat.613]
+	Parent = "Elevation Of Privilege"
+	name = "Parameters or command injection"
+	include = "target is [PLC]"
+	exclude = "target.[Access control policy] is 'Yes' and target.[Secure authentication on the administration interface] is 'Yes' and target.[Support secure communication] is 'Yes'"
+	Description = "The attacker manages to modify parameters in the {target.name} or to transmitt commands without being authorized"
+
