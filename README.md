@@ -1,3 +1,7 @@
+# Warning
+
+Following a change to the cvedetails.com site, the programme is no longer able to correctly categorise CVEs in STRIDE. We are working on this to correct the problem.
+
 # MTMT templates building tool
 
 This tool allows to build a Microsoft Threat Modeling Tool (MTMT) template from a TOML file.
